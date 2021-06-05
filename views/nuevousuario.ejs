@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Makit App</title>
+    <link rel="stylesheet" href= "/css/styles.css">
+    <link rel="stylesheet" href= "/css/adm_styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>
+  <body>
+    <div id="new_user_background" class="new_user_background_op" style="display: inline;"></div>
+        <div id="new_user_div" class="new_user_div_op" style="display: inline;">
+            <form>
+                
+                <p>
+                    <h1>NUEVO USUARIO</h1>
+                </p>
+                <p>
+                    <h3>Ingresa tus datos</h3>
+                </p>
+                <p>
+                    <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="text" name="nombres" minlength="3" maxlength="20" placeholder="Nombre" value=<%=nameval%>>
+                </p>
+                <p>
+                    <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="text" name="apellidos" minlength="3" maxlength="20" placeholder="Apellido" value=<%=lnameval%>>
+                </p>
+                <p>
+                    <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="new_user_phone" type="number" name="telefono" min="900000000" max="999999999" minlength="9" maxlength="9" placeholder="<%=placeholder%>" value=<%=telval%>>
+                    <button onsubmit="return validate_tel()" id="verify_number_btn" type="submit" formaction="/validate_phone" formmethod="POST" style='<%=vc_dis4%>'>Validar número de teléfono</button>
+                    <label style='<%=vc_dis2%>' ><%=label_text%></label>            
+                    <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" name="verification_code" minlength="4" maxlength="4"  id="verification_code_input" placeholder="Ingresa aquí el código" name="verification_code_input" style='<%=vc_dis%>'>
+                    <button type="submit" formaction="/validate_phone_2" formmethod="POST" style='<%=vc_dis5%>'>Validar</button>
+                </p>
+                <p>
+                    <h3>Contraseña</h3>
+                </p>
+                <p>                               
+                    <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="password" id="pass1" name="password1" minlength="8" placeholder="Contraseña" maxlength="20" value=<%=pw1val%>>
+                </p>
+
+                <p>                
+                    <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="password" id="pass2" name="password2" minlength="8" placeholder="Repetir contraseña" maxlength="20" value=<%=pw2val%>> 
+                </p>
+                <p>
+                    <button type="submit" formaction="/guardarnuevocliente" formmethod="POST">Crear</button>
+                    <button type="reset">Borrar todo</button>
+                </p>
+            </form>
+            <form>
+                <button id="nu_back_btn" type="submit" formaction="/" formmethod="POST">Volver</button>
+            </form>
+        </div>       
+
+        <div id="created_succes" class="created_succes_op" style="display: none;">
+            <h1>Cuenta creada con éxito</h1>
+        </div>
+        <div id="phone_validation_request" class="phone_validation_request_op" style="display: none">
+            <input type="number" minlength="4" maxlength="4">
+        </div>
+        <script src="/javascript/index.js"></script>
+        </body>
+        </html>

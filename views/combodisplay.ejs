@@ -1,0 +1,109 @@
+<div id="combodisplay0_0" class="combodisplay_c_0_0_cl" style="display: none;">
+    
+</div>
+<form>
+<div id="combodisplay0_1" class="combodisplay_c_0_1_cl" style="display: none;">
+    
+    
+    <div id="combodisplay0_2" class="combodisplay_c_0_2_cl" style="display: none;">
+        
+        
+            <input name="active_product" type="hidden" id="active_product" value="">
+            <input type="hidden" name="cat_cant" id="cat_items" value="<%=categoriaitems.length%>">
+            <input type="hidden" id="user_id" value="<%=user_id%>">
+            
+
+            <% for(let i = 0;i<productos_categoriaitems.length;i++){ %>
+                <input id="prod_<%=productos_categoriaitems[i].idproductos%>_catitem_<%=productos_categoriaitems[i].idcategoriaitems%>" type="hidden" value="<%=productos_categoriaitems[i].cantidad%>">
+            <%}%>
+            
+
+
+
+
+            <% for(let i = 0;i<productos_categoriaitems.length;i++){ %>
+                <input id="prod_<%=productos_categoriaitems[i].idproductos%>_catfactor_<%=productos_categoriaitems[i].idcategoriaitems%>" type="hidden" value="<%=productos_categoriaitems[i].factor%>">
+            <%}%>        
+            
+            
+
+
+            <% for(let i = 0;i<categoriaitems.length;i++){ %>
+                <input name="cat_items" id="cat_items_name_<%=i%>" type="hidden" value="<%=categoriaitems[i].nombre%>">
+            <%}%>
+            <% for(let i = 0;i<splited_items.length;i++){ %>
+                <input id="<%=i%>_item_cat_length" type="hidden" value="<%=splited_items[i].length%>">
+            <%}%>
+
+
+<h6 id=combo_title></h6>
+<input type="hidden" name="combo_name" id="combo_title_input" value="no_val">
+<input type="hidden" name="combo_price" id="combo_prince_input" value="no_val">
+
+
+<% for(let x = 0;x<splited_items.length;x++){%>
+    <input type="hidden" name="items_cat_length" id="combo_title_input" value="<%=splited_items[x].length%>">
+            <% } %>  
+
+              
+
+<% for(let x = 0;x<categoriaitems.length;x++){ %>
+
+          <div id="<%=categoriaitems[x].nombre%>show" style="display: inline;">
+              <h2 id=counter_<%=x%> class="choose_your">Elige tus <%=categoriaitems[x].nombre%> </h2>
+                <% for(let i = 0;i<splited_items[x].length;i++){ %>
+                    <div class="general_selector_div">
+                        <div class="gen_sel_img_div"  style="background-image: url(/Images/Makis/<%=splited_items[x][i].codename%>.jpg); background-repeat: no-repeat;">
+                        </div>     
+                        <div class="gen_sel_name_div">
+                            <input type="hidden" name="item_name" value="<%=splited_items[x][i].nombre%>"  >                      
+                                <p><%=splited_items[x][i].nombre%></p>
+                        </div>
+                        <div class="gen_sel_description_div">
+                                <p><%=splited_items[x][i].descripcion%></p>                     
+                        </div>
+                        <div class="gen_sel_picker">
+                            <div id="<%=x%>_uparrow_<%=i%>" class="gen_sel_pick_uparrow">                                      
+                            </div>
+                            <div class="gen_sel_pick_count">
+                                        <input name="item_cant" id="<%=x%>_count_<%=i%>"  readonly="readonly" class="inputstyle" type="number" min="0" value="0" style="background-color: rgba(0,0,0,0);">
+                            </div>  
+                            <div id="<%=x%>_downarrow_<%=i%>" class="gen_sel_pick_downarrow">           
+                            </div>                             
+                        </div>                        
+                    </div>
+                <div class=gen_sel_spacing_div>
+                </div>
+             <% } %>
+            </div>
+            <% } %>      
+            
+        
+    </div>
+    <div id="combodisplay0_4" class="combodisplay_c_0_4_cl" style="display: none;"></div>
+    
+</div>
+<div id="combodisplay0_3" class="combodisplay_c_0_3_cl" style="display: none;">
+    <button type="button" id="submit_button" >Agregar al carrito</button>
+
+</div>
+<%- include ('sc_confirm')-%>
+
+
+</form>
+
+<div id="single_display_background" class="single_display_background_cl" style="display:none"></div>
+<div id="single_display" class="single_display_cl" style="display:none">
+    <form id="sinple_display_action" action="/fillshoppingcart2" method="POST">
+        <div id="single_prod_name" class="single_prod_name"></div>
+        <div id="single_prod_picker" class="single_prod_picker">
+            <div id="singlep_up_arrow" class="singlep_up_arrow"></div>
+                <div id="singlep_input_div" class="singlep_input_div"><input readonly="readonly" type="text" id="single_prod_input" name="single_prod_input_cant" class="single_prod_input" value="0"></div>
+            <div id="singlep_down_arrow" class="singlep_down_arrow"></div>
+        </div>
+        <div id="single_prod_btn" class="single_prod_btn"><button class="add_sprod_btn" type="submit">Agregar</button></div>
+        <input id="sprod_price_input" name="sprod_price_input" type="hidden" value="">
+        <input id="sprod_name_input" name="sprod_name_input" type="hidden" value="">
+        <input name="active_product2" type="hidden" id="active_product2" value="">
+    </form>
+</div>

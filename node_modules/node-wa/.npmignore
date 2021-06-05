@@ -1,0 +1,11 @@
+lib-cov
+**.swp
+*.sw*
+*.orig
+.DS_Store
+node_modules/
+test/
+Makefile
+CNAME
+index.html
+.idea/

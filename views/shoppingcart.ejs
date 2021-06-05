@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Makit App</title>
+    <link rel="stylesheet" href= "/css/styles.css">
+    <link rel="stylesheet" href= "/css/styles2.css">
+    <link rel="stylesheet" href= "/css/sc_styles.css">
+    <link rel="stylesheet" href= "/css/send_order.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  </head>
+  <body id="body_general" style="overflow-y: scroll; overflow-x:hidden">
+<input id="sc_items_quantity" type="hidden" value="<%=prod_name.length%>">
+    <%- include ('serifafollow')-%>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>
+    <input type="hidden" id="user_id" value="<%=user_id%>">
+    <% if(prod_name.length>0){ %>
+      <% for(let i = 0;i<prod_name.length;i++){ %>
+        <input type="hidden" id="prod_id_<%=i%>" value="<%=prod_name[i][4]%>">
+        <%}%>
+        <% for(let i = 0;i<prod_name.length;i++){ %>
+          <input type="hidden" id="btn_men_name_<%=i%>" value="<%=prod_name[i][0]%>">
+          <%}%>
+
+      <% for(let i = 0;i<prod_name.length;i++){ %>
+        <% for(let z = 0;z<prod_name[i][3].length;z++){ %>
+          <% for(let x = 0;x<prod_name[i][3][z].length;x++){ %>
+            <input type="hidden" id="prod_sel_cant_<%=prod_name[i][4]%>_<%=z%>_<%=x%>" value="<%=prod_name[i][3][z][x]%>">
+            <%}%>
+        <%}%>
+      <%}%>
+
+
+    <div class="sc_content">
+      <div id="item_header_div">
+        <div style="user-select: none;" id="page_title">Mis productos</div>
+      </div>
+      <input id="buttons_count" type="hidden" value='<%=prod_name.length%>'>
+<%  for(let i = 0;i<prod_name.length;i++){  %>
+
+
+
+<%if(prod_name[i][5]=="multiple"){%>
+  <div id="sub_item_div_4" class="sub_item_div_4"><form><button  type="submit" formaction="/erase_product/<%=i%>"  formmethod="post"  style="background-color: rgba(0,0,0,0);height: 100%;" ><img src="/Images/close-btn.png" width="150%" id="erase_item_btn_<%=i%>"></button></form></div>
+  <input type="hidden"  id="sc_prod_btn_value_<%=i%>" value="<%=prod_name[i][4]%>">
+
+      <div  class="item_div" id="sc_prod_btn_<%=i%>" value="<%=prod_name[i][4]%>">
+        
+        <div id="sub_item_div_1"><h1 id="btn_men_name_<%=i+1%>"><strong style="user-select: none;"><%=prod_name[i][0]%></strong></h1></div>
+        
+        <% for(let z = 0;z<prod_name[i][1].length;z++){%>
+          <div id="sub_item_div_1_content_2">
+          <%if(prod_name[i][3][z].reduce((a,b)=>a+b, 0)>0){%>
+        <div id="sub_item_div_1_content_1"><h1 style="user-select: none;"><%=prod_name[i][1][z][0].toUpperCase()%></h1></div>
+        
+        <% for(let x = 0;x<prod_name[i][2][z].length;x++){%>
+          <%if(prod_name[i][3][z][x]>0){%>
+          <h2 style="user-select: none;"><img src="/Images/maki_vineta.png" width="20px"> <%=prod_name[i][2][z][x]%> x <%=prod_name[i][3][z][x]%></h2>
+          <%}%>
+            <%}%>
+          
+            <%}%>
+          </div>
+          <%}%>
+        <div id="sub_item_div_2"><h1></h1></div>
+        <div id="sub_item_div_3"><h1 style="user-select: none;">S/ <%=prod_price[i]%></h1></div>
+        <div id="sub_item_div_5"><h5 style="color:white; user-select: none;">Toca para editar</h5></div>
+      </div>
+      <%}else{%>
+        <div id="sub_item_div_4" class="sub_item_div_4"><form><button  type="submit" formaction="/erase_product/<%=i%>"  formmethod="post"  style="background-color: rgba(0,0,0,0);height: 100%;" ><img src="/Images/close-btn.png" width="150%" id="erase_item_btn_<%=i%>"></button></form></div>
+        <input type="hidden"  id="sc_prod_btn_value_<%=i%>" value="<%=prod_name[i][4]%>">
+        <div  class="item_div"></div>
+            <div  class="item_div" value="<%=prod_name[i][4]%>">
+              
+              <div id="sub_item_div_1"><h1 id="btn_men_name_<%=i+1%>"><strong style="user-select: none;"><%=prod_name[i][0]%></strong></h1></div>
+              
+              <% for(let z = 0;z<prod_name[i][1].length;z++){%>
+                <div id="sub_item_div_1_content_2">
+                <%if(prod_name[i][3][z].reduce((a,b)=>a+b, 0)>0){%>
+              <div id="sub_item_div_1_content_1"><h1 style="user-select: none;"><%=prod_name[i][1][z][0].toUpperCase()%></h1></div>
+              
+              <% for(let x = 0;x<prod_name[i][2][z].length;x++){%>
+                <%if(prod_name[i][3][z][x]>0){%>
+                <h2 style="user-select: none;"><img src="/Images/maki_vineta.png" width="20px"> <%=prod_name[i][2][z][x]%> x <%=prod_name[i][3][z][x]%></h2>
+                <%}%>
+                  <%}%>
+                
+                  <%}%>
+                </div>
+                <%}%>
+              <div id="sub_item_div_2"><h1></h1></div>
+              <div id="sub_item_div_3" style="user-select: none;"><h1>S/ <%=prod_price[i]%></h1></div>
+            </div>
+
+
+
+
+
+
+
+
+        <% } %>
+<% } %>
+
+
+
+
+
+<div class="item_div">
+  <div id="del_sub_item_div_1" style="user-select: none;"><h1>Delivery</h1></div>
+        <div id="del_sub_item_div_2"><h1 style="user-select: none;">---></h1></div>
+        <div id="del_sub_item_div_3"><h1 style="user-select: none;">S/ 4.90</h1></div>
+</div>
+
+  <div style="border-style:solid; border-top: none;border-left: none;border-right: none; border-width: 2px;border-color: white;"></div>
+   
+<div class="item_div">
+  <div id="del_sub_item_div_1"><h1 style="user-select: none;">Total</h1></div>
+        <div id="del_sub_item_div_2"><h1 style="user-select: none;">---></h1></div>
+        <% let sum=parseFloat(0);  for(let i=0;i<prod_price.length;i++){ sum = sum+parseFloat(prod_price[i]); }%>
+        <div id="del_sub_item_div_3"><h1 style="user-select: none;">S/ <%=parseFloat(sum+4.90).toFixed(2)%></h1></div>
+</div>
+<div id="footer_btns">
+  <form>
+    <button id="confirmation_open" type="button">Borrar todo</button>
+    <button id="confirmation_send_order" type="button" >Enviar pedido</button>
+    <button ID="keep_buying" type="submit" formaction="/firstmenulist1closetopslide" formmethod="POST">Seguir comprando</button>
+  </form>
+</div>
+</div>
+
+<%- include ('mod_product')-%>
+
+<div id="send_order_background" class="send_order_background_cl" style="display: none;"></div>
+<div id="send_order_form" class="send_order_form_cl" style="display: none;">
+<form>
+  <div id="form_1">
+    <h3>¿Donde quieres tu pedido?</h3>
+    <h3 id="selected_order_send_type" type="text">Av. La Molina 615, Int 202, La Molina</h3>
+    <button class="btn_up" id="delivery_btn" type="button">En mi domicilio (Delivery)</button>
+    <button class="btn_up" id="to_adress_btn" type="button">Recojer en el local</button>
+  </div>
+  <div>
+    <h3>¿Para cuando?</h3>
+    <input name="selected_receive_type_input" id="selected_receive_type_input" readonly="readonly" type="hidden" value="">
+    <h3 id="selected_receive_type_show"></h3>
+    <button class="btn_up" id="receive_now_btn" type="button">Lo quiero ya mismo!</button>
+    <button class="btn_up" id="receive_later_btn" type="button">Lo quiero para luego</button>
+    <div id="date_picker_background" class="date_picker_background_cl" style="display:none"></div>
+    <div id="date_picker_content" class="date_picker_content_cl" style="display:none">
+      <input id="date_picker_input" type="datetime">
+      <button id="date_picker_back_btn">Volver</button>
+      <button id="date_picker_confirm">Confirmar</button>
+    </div>
+
+  </div>
+  <div>
+    <h3>¿Como lo quieres pagar?</h3>
+    <input name="selected_payment_type_input" id="selected_payment_type_input"  readonly="readonly" type="hidden" value="">
+    <h3 id="selected_payment_type_show"></h3>
+
+    <div class="group_btns">
+    <button id="card_btn" class="btn_up" type="button" style="background-image: url('/Images/credit_card.png');background-repeat: no-repeat;background-size: 100%"></button>
+    <button id="pago_link_btn" class="btn_up" type="button" style="background-image: url('/Images/pagolink.png');background-repeat: no-repeat;background-size: 100%"></button>
+    <button id="yape_btn" class="btn_up" type="button" style="background-image: url('/Images/yape.png');background-repeat: no-repeat;background-size: 100%"></button>
+    <button id="plin_btn" class="btn_up" type="button" style="background-image: url('/Images/plin.png');background-repeat: no-repeat;background-size: 100%"></button>
+    <button id="bcp_transfer_btn" class="btn_up" type="button" style="background-image: url('/Images/bcp.png');background-repeat: no-repeat;background-size: 100%"></button>
+    <button id="bbva_transfer_btn" class="btn_up" type="button" style="background-image: url('/Images/bbva.png');background-repeat: no-repeat;background-size: 100%"></button>
+    </div>
+  </div>
+  <div>
+    <div id=send_order_separator></div>
+    <button id="send_close_btn">Volver</button><button id="send_order_ultimate">Enviar</button>
+  </div>
+</form>
+</div>
+
+
+
+
+<div id="address_selector" class="address_selector_op" style="display: none;">
+  <div id="no_address_found">
+    <h3 id="not_registered_label">Aun no has registrado una dirección!</h3>
+    <h3>Ingresa tu dirección</h3>
+    <button type="button" id="register_new_addres"></button>
+  </div>
+  <div id="">
+  </div>
+  <h3>Selecciona una dirección</h3>
+</div>
+
+
+
+
+
+
+
+<% }else{ %>
+  <div id="sc_no_item_div">Aún no tienes items en tu carrito! 
+    <form action="/firstmenulist1closetopslide" method="POST" style="position:relative; height: 10vh;"><button type="submit" style="height: auto;">¿Qué esperas? ¡Has tu pedido aquí!</button></form>
+  </div>
+  
+  <% } %>
+
+<%- include ('sc_alerts')-%>
+    <%- include ('topbar')-%>
+    <script src="/javascript/shoppingcart.js"></script> 
+    <script src="/javascript/topbar.js"></script> 
+  </body>
+</html>
+

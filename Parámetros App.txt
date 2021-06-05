@@ -1,0 +1,95 @@
+id ssh: tqbxzl09nyu4
+password: jf7l2p93lI
+
+para los errores de npm
+rm -rf node_modules
+npm install
+
+para ver los procesos npm activos 
+ps -ef | grep node
+
+para asesinar violentamente al proceso node
+kill -9 PROCESS_ID
+
+para instalar con el reseteador automático (que solo funciona con node v10 o mayor)
+
+npm install pm2 -g
+
+para iniciar con el reseteador automático 
+
+pm2 start App.js
+
+aumentar memoria de node 
+
+$env:NODE_OPTIONS="--max-old-space-size=8192"
+
+cuenta twilio:
+makitperu@gmail.com
+jf7l2p93lialejandra
+
+Cuenta Microverse Dashboard
+mario.chois.navarro@gmail.com
+46091654Ale
+
+Cuenta Microverse ZenDesk
+mario.chois.navarro@gmail.com
+46091654@Le
+
+
+leo 46
+
+kow 46.90
+
+
+
+yyw77pv8446e@173.201.183.152
+
+
+Host 173.201.183.152
+  HostName 173.201.183.152
+  User yyw77pv8446e
+  IdentityFile C:\Users\rio_c\.ssh\id_rsa
+
+
+
+Mysql cpanel (importar ip primero)
+
+ip
+173.201.183.152
+clave:
+jf7l2p93li
+
+
+
+
+sabado 22 mayo
+rappi hasta el momento * (3) = 90.66
+pedidos ya! * (1) = 41.43
+yeremy 46.80
+Albaro 48.80
+Miky 81.80
+Roy 131.40
+jorge 61.90
+brenda 46.80
+______________________
+total = 719.77
+
+
+rappi hasta el momento * (6) = 181.24
+pedidos ya! * (3) = 78.84
+Vilma 18
+Kow 35.60
+Annie 66.80
+Diana 81.90
+erika 39.90
+Melissa 81.60
+Zulema 43.80
+Yeremy 60.80
+Daniela 54.70
+______________________
+total = 743.18
+
+
+envíos = 6.05, 12.37, 8.13, 6.05, 10, 6.05
+
+Resto = 694.53

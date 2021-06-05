@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Makit App</title>
+    <link rel="stylesheet" href= "/css/styles.css">
+    <link rel="stylesheet" href= "/css/adm_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  </head>
+  <body style="position:absolute;width: 100vw;text-align: center; background-image: url(/images/fondoescamas.png);background-repeat: no-repeat;background-size: 100%; background-repeat: no-repeat">
+    <%- include ('serifafollow')-%>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>
+    
+    
+    <div id="side_navigator">
+    <form>
+    <div id="side_navigator_header"></div>
+    <div id="side_navigator_content">
+    <div id="nav_btn_products" class="nav_btn">Products</div>
+    <div id="nav_btn_customers" class="nav_btn">Customers</div>
+    <div id="nav_btn_orders" class="nav_btn">Orders</div>
+    <div id="nav_btn_kds" class="nav_btn">KDS</div>
+    </div>
+  <div id="side_navigator_footer">
+        <div id="footer_btn" type="button">Configuration</div>
+  </div>
+  </form>
+  </div>
+  <%- include ('adm_customers')-%>
+  <%- include ('adm_products')-%>
+  <%- include ('adm_orders')-%>
+  <%- include ('adm_kds')-%>
+  <script src="/javascript/adm_panel_logged.js"></script> 
+  </body>
+</html>
+

@@ -1,0 +1,269 @@
+.adm_log_backshadow_op{
+position: absolute;
+height: 100vh;
+width: 100vw;
+left:0vw;
+top:0vh;
+background-color: rgba(0, 0, 0, 0.4);
+animation-name: adm_log_backshadow_ap_anim;
+animation-duration: 0.25s;
+
+}
+@keyframes adm_log_backshadow_ap_anim{
+    0%{left: 0vw; opacity: 0;}
+    100%{left: 0vw; opacity: 0.4;}
+}
+
+.adm_log_op{
+text-align: center;
+box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.6);
+position: absolute;
+top: 50vh;
+left: 20vw;
+width: 50vw;
+height: auto;
+background-image: url(/images/Home_background.png);
+background-size: 40%;
+padding: 5%;
+border-radius: 3vw;
+animation-name: adm_log_op_anim;
+animation-duration: 0.5s;
+}
+.adm_log_op input{
+    margin-top: 10px;
+}
+.adm_log_op button{
+    margin-top: 10px;
+}
+@keyframes adm_log_op_anim{
+    0%{left: 200vw}
+    50%{left: 200vw}
+    100%{left: 20vw}
+}
+
+.adm_log_backshadow_cl{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left:-200vw;
+    top:0vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation-name: adm_log_backshadow_cl_anim;
+    animation-duration: 0.5s;
+    }
+    @keyframes adm_log_backshadow_cl_anim{
+        0%{left: 0vw; opacity: 0..5;}
+        50%{left: 0vw; opacity: 0..5;}
+        100%{left: 0vw; opacity: 0;}
+    }
+    
+
+.adm_log_cl{
+    text-align: center;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 50vh;
+    left: -200vw;
+    width: 50vw;
+    height: auto;
+    background-image: url(/images/Home_background.png);
+    background-size: 40%;
+    padding: 5%;
+    border-radius: 3vw;
+    animation-name: adm_log_cl_anim;
+    animation-duration: 0.5s;
+    }
+    @keyframes adm_log_cl_anim{
+        0%{left: 20vw}
+        50%{left: -200vw}
+        100%{left: -200vw}
+    }
+/*-------------------------------------SIDE-NAVIGATOR---------------------------*/
+#side_navigator{
+    position: absolute;
+    background-color: #a9625d;
+    left: -2vw;
+    width: 20vw;
+    height: 100vh;
+    top: -2vh;
+    color: white;
+}
+
+#side_navigator_header{
+    position: relative;
+    background-image: url(/Images/logomakit.png);
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    top:0%;
+    width: 100%;
+    height: 20vh;
+}
+#side_navigator_content{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    left: 0vw;
+}
+.nav_btn{
+    position: relative;
+    left: 0vw;
+    width: 20vw;
+    height: 5vh;
+    background-color: #00000033;
+    padding: auto;
+    user-select: none;
+}
+#footer_btn{
+    position: relative;
+    left: 0vw;
+    width: 20vw;
+    height: 5vh;
+    background-color: #00000033;
+    padding: auto;
+    color:white;
+    user-select: none;
+}
+#side_navigator_footer{
+    position: absolute;
+    left: 0vw;
+    width: 20vw;
+    height: 5vh;
+    bottom: 2vw;
+}
+/*-------------------------------------------------CUSTOMERS------------------------------------------------*/
+.customers_main_content_div{
+    position: absolute;
+    height: 100vh;
+    width: 80vw;
+    left: 20vw ;
+    top:-1vw;
+    
+   
+}
+
+.customers_grid{
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left:2vw;
+    top: 16vh;
+    width:  75vw;
+    height: 80vh;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.row_spacing{
+    position: relative;
+    height: 4vh;
+    width:  200%;
+    float: left;
+    padding: auto;
+}
+
+.row_spacing_modifiers{
+    position: relative;
+    height: 4vh;
+    width:  200%;
+    float: left;
+    padding: auto;
+    background-color: rgb(225, 84, 65);
+}
+.row_spacing_header{
+    position: relative;
+    height: 4vh;
+    width:  200%;
+    float: left;
+    padding: auto;
+    background-color: rgb(225, 84, 65);
+}
+
+.col_1{
+    position: absolute;
+    width: 3%;
+    left: 0%;
+    border-style:solid;
+    border-width: 0.5px;
+    border-top: rgba(0, 0, 0, 0);
+    border-left: rgba(0, 0, 0, 0);
+    border-right: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0,0.4);
+    background-color: rgba(0, 0, 0,0.1);
+    height: 4vh;
+}
+.col_2{
+    position: absolute;
+    width: 10%;
+    left: 3%;
+    border-style: solid;
+    border-width: 0.5px;
+    border-top: rgba(0, 0, 0, 0);
+    border-left: rgba(0, 0, 0, 0);
+    border-right: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0,0.4);
+    height: 4vh;
+}
+.col_3{
+    position: absolute;
+    width: 10%;
+    left: 13%;
+    border-style: solid;
+    border-width: 0.5px;
+    border-top: rgba(0, 0, 0, 0);
+    border-left: rgba(0, 0, 0, 0);
+    border-right: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0,0.4);
+    height: 4vh;
+}
+.col_4{
+    position: absolute;
+    width: 25%;
+    left: 23%;
+    border-style: solid;
+    border-width: 0.5px;
+    border-top: rgba(0, 0, 0, 0);
+    border-left: rgba(0, 0, 0, 0);
+    border-right: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0,0.4);
+    height: 4vh;
+}
+.col_5{
+    position: absolute;
+    width: 10%;
+    left: 48%;
+    border-style: solid;
+    border-width: 0.5px;
+    border-top: rgba(0, 0, 0, 0);
+    border-left: rgba(0, 0, 0, 0);
+    border-right: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0,0.4);
+    height: 4vh;
+}
+.col_6{
+    position: absolute;
+    width: 5%;
+    left: 58%;
+    border-style: solid;
+    border-width: 0.5px;
+    border-top: rgba(0, 0, 0, 1);
+    border-left: rgba(0, 0, 0, 0);
+    border-right: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0,0.4);
+    height: 4vh;
+}
+.col_7{
+    position: absolute;
+    width: 10%;
+    left: 63%;
+    border-style: solid;
+    border-width: 0.5px;
+    border-top: rgba(0, 0, 0, 0);
+    border-left: rgba(0, 0, 0, 0);
+    border-right: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0,0.4);
+    height: 4vh;
+}
+
+
+

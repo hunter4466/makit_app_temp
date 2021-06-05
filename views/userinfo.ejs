@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Makit App</title>
+    <link rel="stylesheet" href= "/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <%- include ('serifafollow')-%>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>  
+    <div class="userinfobody">    
+      <form>
+        <h2 style="color: rgb(20, 20, 20); ">Mis Datos...</h2>
+        <ul>
+          <li>
+            <p style="color: rgb(20, 20, 20); padding-right: 2%;padding-left: 2%;border-radius: 8px;background-color: white; opacity: 0.5;">Nombre y apellido: <%=filas[0].nombre%> <%=filas[0].apellido%></p>
+            <p><button class="nomyap">Cambiar nombre</button></p>
+          </li>
+          <li>
+            <p style="color: rgb(20, 20, 20); padding-right: 2%;padding-left: 2%;border-radius: 8px;background-color: white; opacity: 0.5;">Teléfono: <%=filas[0].telefono%></p >
+            <p><button class="chtelbtn">Cambiar teléfono</button></p>
+          </li>
+
+          <li>
+            <p style="color: rgb(20, 20, 20); padding-right: 2%;padding-left: 2%;border-radius: 8px;background-color: white; opacity: 0.5;">E-Mail: <%if(filas[0].email == null){%> Sin registrar! <%}else{%><%=filas[0].email%><%}%></p>
+            <%if(filas[0].email == null){%><p><button id="email_reg" class="chmailbtn" type="button">Registrar e-mail</button></p><%}else{%><p><button id="email_cha" class="chmailbtn" type="button">Cambiar e-mail</button></p><%}%>
+          </li>
+          
+          <li>
+            <p style="color: rgb(20, 20, 20); padding-right: 2%;padding-left: 2%;border-radius: 8px;background-color: white; opacity: 0.5;">Fecha de nacimiento: <%if(filas[0].cumpleanos == null){%> Sin registrar! <%}else{%><%let date = filas[0].cumpleanos;%><%=date.toLocaleDateString('en-US',{day: '2-digit',month: '2-digit',year: 'numeric',})%><%}%></p>
+            <%if(filas[0].cumpledia === null){%><p><button id="register_birthdate_btn" class="chcumbtn_add">Registrar Fecha de Nacimiento</button></p><%}else{%><p><button id="register_birthdate_btn" class="chcumbtn_add">Cambiar Fecha de nacimiento</button></p><%}%>
+          </li>
+          <li>
+            <p style="color: rgb(20, 20, 20); padding-right: 2%;padding-left: 2%;border-radius: 8px;background-color: white; opacity: 0.5;">Contraseña: *********** </p>
+            <p><button class="chpassbtn">Cambiar contraseña</button></p>
+          </li>
+          <li style="border-radius: 3vw;background-color:rgba(0,0,0,0.4); color: rgb(20, 20, 20); padding-top: 5%;padding-bottom: 2vw;"><label for="ol" style="padding-bottom: 0vw;padding-right: 2%;padding-left: 2%;font-size: 50px;">Direcciones: </label>
+            <p>
+              <ol style="padding-top: 0%">
+                <% if(direcciones.length == 0){%>
+                      <h3>Aun no tienes direcciones registradas :(</h3>
+                      <button id="register_new_adress">Toca aquí para registrar una!</button>
+                <%}else{%>
+                
+                <% for(let i = 0;i<direcciones.length;i++){%>
+
+                <li style="color:white; padding-top: 10%;">
+                  <ul>
+                    <li style="color:white;text-align: left;"><strong>Dirección: </strong><%=direcciones[i].direccion%></li>
+                    <li style="color:white;text-align: left;">Referencia: <%=direcciones[0].referencia%></li>
+                  </ul>
+                </li>
+                <%}%>
+              </ol>
+            </p>
+            <p>
+              <button id="register_new_adress">Agregar</button>
+            </p>
+            <%}%>
+          </li>       
+        </ul>
+      </form>
+    </div>
+
+
+
+<input type="hidden" id="tel_length" name="tel_length" value="<%=tel_list.length%>">
+<% for(let i =0;i<tel_list.length;i++){%>
+<input type="hidden" name="tel_exist" id="tel_exist_<%=i%>" value="<%=tel_list[i]%>">
+<%}%>
+
+<input type="hidden" name="active_pass" id="active_pass" value="<%=user_pass%>">
+<input type="hidden" name="active_email" id="active_email" value="<%=user_email%>">
+
+<input type="hidden" id="email_cant" name="email_cant" value="<%=email_list.length%>">
+<% for(let i =0;i<email_list.length;i++){%>
+  <input type="hidden" name="email_exist" id="email_exist_<%=i%>" value="<%=email_list[i]%>">
+  <%}%>
+
+    <%- include ('topbar')-%>
+    <%- include ('change_info')-%>
+    <script src="/javascript/topbar.js"></script> 
+    <script src="/javascript/useroptions.js"></script> 
+    <% if(filas[0].direccion2){let dir2 = filas[0].direccion2;} %>
+  </body>
+</html>
+

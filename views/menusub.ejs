@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Makit App</title>
+    <link rel="stylesheet" href= "/css/styles.css">
+    <link rel="stylesheet" href= "/css/styles2.css">
+  </head>
+  <body id="body_general" style="overflow-y: scroll; overflow-x:hidden">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>   
+    <%- include ('serifafollow')-%>
+    <div class="menubuttons2">
+      <form>
+        <input id="buttons_count" type="hidden" value='<%=productos.length%>'>
+        <% for(let i = 0;i<productos.length;i++){ %>
+          <button name="product_btn_id" type="button" id="producto<%=i+1%>btn" class="firstmenu<%=i%>" value="<%=productos[i].idproductos%>">
+            <input type="hidden" id="producto<%=i+1%>btn_id2" value="<%=productos[i].type%>">
+            <div class="btn_men_name" value="<%=productos[i].nombre%>"><input id ="btn_men_name_<%=i+1%>" type="hidden" value="<%=productos[i].nombre%>"><%=productos[i].nombre%></div>
+            <div class="btn_men_descr" value="<%=productos[i].descripcion%>"><input id ="btn_men_descr_<%=i+1%>" type="hidden" value="<%=productos[i].descripcion%>"><%=productos[i].descripcion%></div>
+            <div class="btn_men_price" value="<%=productos[i].precio%>"><input id ="btn_men_price_<%=i+1%>" type="hidden" value="<%=productos[i].precio%>" > S/ <%=productos[i].precio%></div>
+          </button>
+        <%}%>   
+      </form>
+    </div>
+    <%- include ('topbar')-%>
+    
+    <form><button id="menu_back_btn_id" class="menu_back_btn_op" formaction="/firstmenulist1closetopslide" formmethod="POST"> VOLVER</button></form>
+    <%- include ('combodisplay')-%>
+
+    
+    <script src="/javascript/topbar.js"></script>
+    <script src="/javascript/slidepicker.js"></script> 
+  </body>
+</html>
+
+

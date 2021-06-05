@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Makit App</title>
+    <link rel="stylesheet" href= "/css/styles.css">
+    <link rel="stylesheet" href= "/css/adm_styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>
+  <body>
+    <div class="bodylogin">
+      <div class="bodyindex">
+        
+        <form>
+          <div>
+            <img  src="/Images/logomakit.png" width="70%">
+          </div>
+          <div>
+            <input type="text" name="usuario" placeholder="Usuario (Celular)">
+          </div>
+          <div>
+            <input type="password" name="contrasena" placeholder="Contraseña">
+          </div>
+          <div>
+            <button type="submit" formaction="/iniciar_sesion" formmethod="POST" style="height: auto;">Iniciar sesión</button>
+          </div>
+          <div>
+            <button type="submit" formaction="/recuperar_contraseña" formmethod="POST" style="height: auto;">Recuperar contraseña</button>
+          </div>
+          <div>
+            <button id="new_user_btn" type="submit" formaction="/register_user" formmethod="POST" style="height: auto;">Registrarse</button>
+          </div>
+        
+        </form>
+        <div id="msg_div">
+        <h4 class="ingre_msg"><%=message%></h4>
+        <h4 id="creala_ya_mismo"><%=message2%></h4>
+        </div>
+
+      </div>
+    </div>
+    <fb:login-button 
+    scope="public_profile,email"
+    onlogin="checkLoginState();">
+  </fb:login-button>
+
+
+  <div id="adm_log_backshadow" class="adm_log_backshadow_cl" style="display: none;"></div>
+  <div id="adm_log" class="adm_log_cl" style="display: none;">
+    <form action="/get_adm_panel" method="POST">
+      <label>Staff Access</label>
+      <input name="adm_user" id="adm_user"type="text" maxlength="20" placeholder="User">
+      <input name="adm_pass" pass="adm_pass" type="password" maxlength="20" minlength="8" placeholder="Password">
+      <button type="submit">Log In</button>
+    </form>
+  </div>
+
+  <button id="intranet_acces" style="background-color: rgb(0,0,0,0.2); position: absolute; left:25vw;width: 50vw ;">Intranet Makit</button>
+  <script src="/javascript/adm_general.js"></script>
+</body>
+</html>
+

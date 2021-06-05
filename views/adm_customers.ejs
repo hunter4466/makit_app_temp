@@ -1,0 +1,28 @@
+<div style="display: none;" id="customers_main_content_div" class="customers_main_content_div">
+
+<div class="customers_grid">
+        <div class="row_spacing_header">
+            <div class="col_1"">Id</div>
+            <div class="col_2"">Nombre</div>
+            <div class="col_3">Apellido</div>
+            <div class="col_4">E-Mail</div>
+            <div class="col_5">Cumpleaños</div>
+            <div class="col_6">Sexo</div>
+            <div class="col_7">Teléfono</div>
+        </div>
+        <% for(let i =0;i<customers_table.length;i++){ %>
+            <div class="row_spacing">
+            <div class="col_1""><%=customers_table[i].idclientes%></div>
+            <div class="col_2""><%=customers_table[i].nombre%></div>
+            <div class="col_3"><%=customers_table[i].apellido%></div>
+            <div class="col_4"><%=customers_table[i].telefono%></div>
+            <div class="col_5"><%=customers_table[i].cumpledia%>-<%=customers_table[i].cumplemes%>-<%=customers_table[i].cumpleano%></div>
+            <div class="col_6"><%=customers_table[i].sexo%></div>
+            <div class="col_7"><%=customers_table[i].email%></div>
+        </div>
+        <%}%>
+    </div>
+
+
+
+</div>

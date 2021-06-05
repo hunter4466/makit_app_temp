@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Makit App</title>
+    <link rel="stylesheet" href= "/css/styles.css">
+    <link rel="stylesheet" href= "/css/styles2.css">
+  </head>
+  <body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>   
+    <%- include ('serifafollow')-%>
+    <div class="menubuttons">
+      <form>
+        <% for(let i = 0;i<filas.length;i++){ %>
+          <button style="background-image: url(/Images/btn_1.jpg);" formaction="/submenu/<%=filas[i].idcategorias%>" formmethod="POST" class="firstmenu<%=i%>"><%=filas[i].nombre%></button>
+        <%}%>   
+      </form>
+    </div>
+    <%- include ('topbar')-%>
+    <script src="/javascript/topbar.js"></script> 
+  </body>
+</html>

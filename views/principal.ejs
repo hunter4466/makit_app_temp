@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Makit App</title>
+    <link rel="stylesheet" href= "/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  </head>
+  <body style="position:absolute;width: 100vw;text-align: center; background-image: url(/Images/home_background.png);background-repeat: repeat;background-size: 40%">
+    <%- include ('serifafollow')-%>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>
+    
+    <div class="loggedbody">    
+      <div>
+        <h1 class="titleprincipal"><%=welcome%></h1>
+      </div>
+      <div>
+        <h1 class="titleprincipal"><%=username%></h1>
+      </div>
+
+      
+      
+      <div id="testdiv">
+        <form action="/firstmenulist1closetopslide" method="POST" style="position:relative; height: 10vh;"><button type="submit">¡Has tu pedido aquí!</button></form>
+      </div>
+      <div id="testsection">
+
+      </div>
+    </div>
+    <%- include ('topbar')-%>
+    <script src="/javascript/topbar.js"></script> 
+    
+  </body>
+</html>
+

@@ -1,0 +1,135 @@
+<div id="changename0" class="nomyapslide0rev" style="display: none;">
+</div>
+<div id="changename1" class="nomyapslide1rev" style="display: none;">
+</div>
+<div id="changename2" class="nomyapslide2rev" style="display: none;">
+    <form>
+        <p>
+            <h1 class="changenameheader"> CAMBIAR NOMBRE </h1>
+        </p>
+        <p>
+            <input name="name_mod" type="text" placeholder="Nuevo Nombre">
+        </p>
+        <p>
+            <input name="last_name_mod" type="text" placeholder="Apellido">
+        </p>
+        <p>
+            <button formaction="/savemodname" formmethod="POST">Guardar</button>
+        </p>
+        <p>
+            <button type="button" class="nomyap2">Cerrar</button>
+        <p>
+    </form>
+</div>
+
+
+
+
+
+
+<div id="changename0pho" class="nomyapslide0revpho" style="display: none;">
+</div>
+<div id="changename1pho" class="nomyapslide1revpho" style="display: none;">
+</div>
+<div id="changename2pho" class="nomyapslide2revpho" style="display: none;">
+    <form id="change_tel_form" onsubmit="return mod_phone_validation()">
+        <p>
+            <h1 class="changenameheader"> CAMBIAR TELÉFONO </h1>
+        </p>
+        <p>
+            <input id="new_phone_input" name='change_tel' type="text" placeholder="Nuevo Teléfono" minlength="9" maxlength="15">
+        </p>
+        <p>
+            <button type="submit" formaction="/savemodtel" formmethod="POST">Guardar</button>
+        </p>
+        <p>
+            <button type="button" class="chtelbtn2">Cerrar</button>
+        <p>
+            <input id="auth_protocol" name="auth_protocol" type="hidden" value="">
+    </form>
+</div>
+
+
+
+
+
+<div id="changename0pass" class="nomyapslide0revpass" style="display: none;">
+</div>
+<div id="changename1pass" class="nomyapslide1revpass" style="display: none;">
+</div>
+<div id="changename2pass" class="nomyapslide2revpass" style="display: none;">
+    <form onsubmit="return mod_pass_validation()">
+        <p>
+            <h1 class="changenameheader"> CAMBIAR CONTRASEÑA </h1>
+        </p>
+        <p>
+            <input id="actual_pass_input" type="password" placeholder="Contraseña actual">
+        </p>
+        <p>
+            <input name="new_pass_input" id="new_pass_1_input" minlength="8" maxlength="50" type="password" placeholder="Nueva contraseña">
+        </p>
+        <p>
+            <input id="new_pass_2_input" minlength="8" maxlength="50" type="password" placeholder="Repetir nueva contraseña">
+        </p>
+        <p>
+            <button formaction="/savemodpass" formmethod="POST">Guardar</button>
+        </p>
+        <p>
+            <button type="button" class="chpassbtn2">Cerrar</button>
+        <p>
+            <input id="auth_protocol_pass" name="auth_protocol_pass" type="hidden" value="">
+    </form>
+</div>
+
+
+
+
+
+<div id="changename0mail" class="nomyapslide0revmail" style="display: none;">
+</div>
+<div id="changename1mail" class="nomyapslide1revmail" style="display: none;">
+</div>
+<div id="changename2mail" class="nomyapslide2revmail" style="display: none;">
+    <form onsubmit="return save_mod_email_auth()">
+        <p>
+            <h1 id="header_ch_email" class="changenameheader"> E-MAIL </h1>
+        </p>
+        <p>
+            <input name="new_email_input" id="new_email_input" type="email" placeholder="Nuevo E-Mail" minlength="8">
+        </p>
+        <p>
+            <button formaction="/savemodemail" formmethod="POST">Guardar</button>
+        </p>
+        <p>
+            <button type="submit" formaction="/savemodemail" formmethod="POST" class="chmailbtn2">Cerrar</button>
+        <p>
+            <input id="auth_protocol_email" name="auth_protocol_email" type="hidden" value="">
+    </form>
+</div>
+
+
+
+
+
+<div id="changename0cum" class="nomyapslide0revcum" style="display: none;">
+</div>
+<div id="changename1cum" class="nomyapslide1revcum" style="display: none;">
+</div>
+<div id="changename2cum" class="nomyapslide2revcum" style="display: none;">
+    <form onsubmit="return save_mod_birth()">
+        <p>
+            <h1 class="changenameheader"> FECHA DE NACIMIENTO</h1>
+        </p>
+        <p>
+            <input id="new_birth_input_2" name="new_birth_input_2" style="width:60%;margin-left:1vw;align-items: center;" type="date" placeholder="dd/mm/aaaa" value="hello">
+        </p>
+        <p>
+            <button formaction="/savemodbirth" formmethod="POST">Guardar</button>
+        </p>
+        <p>
+            <button type="button" class="chcumbtn2">Cerrar</button>
+        <p>
+            <input id="auth_protocol_birth" name="auth_protocol_birth" type="hidden" value="">
+    </form>
+</div>
+

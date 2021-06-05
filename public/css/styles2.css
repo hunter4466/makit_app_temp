@@ -1,0 +1,596 @@
+/*--------------------------------------------------------------------COMBO CONSTRUCTOR--------------------------------------------------------------------------*/
+
+/*-------------------------------------------OPEN------------------------------------------*/
+.combodisplay_c_0_0_op{ /*---<<<<<<<-----BACK SHADOW-----*/
+    position: fixed;
+    height: 100vh;
+    left: 0vw;
+    width: 100vw;
+    top: -2vw;
+    align-content: center;
+    background-color: black;
+    opacity: 0.5;
+    animation-name: cd_c_op_anim_bs;
+    animation-duration: 0.5s;
+    overflow-y: hidden;
+}
+
+@keyframes cd_c_op_anim_bs{
+    0%{opacity: 0;}
+    100%{opacity: 0.5;}
+}
+.combodisplay_c_0_1_op{ /*---<<<<<<<------FONDO----------*/
+    position: fixed;
+    border-radius: 3vw;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    height: 70vh;
+    width: 95vw;
+    top:5vh;
+    left: 2vw;
+    align-content: center;
+    background-image: url(/images/Home_background.png);
+    background-size: 40%;
+    animation-name: cd_c_op_anim;
+    animation-duration: 1s;
+    overflow: scroll;
+    overflow-x:hidden;
+
+}
+.combodisplay_c_0_2_op{ /*---<<<<<<<------CONTENT--------*/
+    position: relative;
+    left:2.5%;
+}
+#combo_title{
+    color: black;
+    font-size: 50px;
+    margin: 20px;
+}
+@keyframes cd_c_op_anim{
+    0%{height: 0px; opacity: 0;}
+    50%{height: 0px; opacity: 0;}
+    100%{height: 70vh; opacity: 1;}
+}
+.combodisplay_c_0_3_op{ /*---<<<<<<<------SUBMIT BUTTON--------*/
+    position: absolute;
+    left:20vw;
+    width: 60%;
+    height: 9%;
+    top:89%;
+    opacity: 1;
+    animation-name: submitanim;
+    animation-duration: 2s;
+}
+@keyframes submitanim{
+0%{left:-200vw}
+50%{left:-200vw}
+90%{left: 23vw}
+95%{left: 17vw}
+98%{left: 22vw}
+99%{left: 18vw}
+100%{left: 20vw}
+
+}
+.combodisplay_c_0_3_op button{
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100% ;
+    height: 100%;
+}
+.combodisplay_c_0_4_op{ /*---<<<<<<<------CLOSE BUTTON--------*/
+    position: absolute;
+    background-image: url(/Images/close-btn.png);
+    background-size: 88%;
+    background-repeat: no-repeat;
+    right: 1vw;
+    top: 1vh;
+    width: 15vw;
+    height: 10vh;
+    opacity: 1;
+    animation-name: closeanimop;
+    animation-duration: 2s;
+}
+@keyframes closeanimop{
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
+
+/*-------------------------------------------CLOSE------------------------------------------*/
+.combodisplay_c_0_0_cl{ /*---<<<<<<<-----BACK SHADOW-----*/
+    position: fixed;
+    height: 100vh;
+    left: -200vw;
+    width: 100vw;
+    top: -2vw;
+    align-content: center;
+    background-color: black;
+    opacity: 0;
+    animation-name: cd_c_cl_anim_bs;
+    animation-duration: 1s;
+}
+@keyframes cd_c_cl_anim_bs{
+    0%{opacity: 0.5; left: 0vw;}
+    50%{opacity: 0.5; left: 0vw;}
+    100%{opacity: 0;left: 0vw;}
+}
+
+.combodisplay_c_0_1_cl{ /*---<<<<<<<------FONDO----------*/
+    position: fixed;
+    border-radius: 3vw;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    height: 70vh;
+    width: 88vw;
+    opacity: 0;
+    top:5vh;
+    left: -500px;
+    text-align: left;
+    align-content: left;
+    background-image: url(/images/Home_background.png);
+    background-size: 40%;
+    animation-name: cd_c_cl_anim;
+    animation-duration: 1s;
+    overflow: scroll;
+}
+.combodisplay_c_0_2_cl{ /*---<<<<<<<------CONTENT--------*/
+    position: relative;
+    left:-200vw;
+    opacity: 0;
+}
+
+@keyframes cd_c_cl_anim{
+    0%{opacity: 0.5; left: -2vw}
+    100%{opacity: 0;left: -500px;}
+}
+.combodisplay_c_0_3_cl{ /*---<<<<<<<------SUBMIT BUTTON--------*/
+    position: absolute;
+    left:-500vw;
+    width: 60%;
+    height: 9%;
+    top:89%;
+    opacity: 1;
+    animation-name: submitanim2;
+    animation-duration: 1s;
+}
+@keyframes submitanim2{
+    0%{opacity: 1; left: 20vw;}
+    100%{opacity: 0;left: -500px;}
+}
+.combodisplay_c_0_3_cl button{
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100% ;
+    height: 100%;
+}
+.combodisplay_c_0_4_cl{ /*---<<<<<<<------CLOSE BUTTON--------*/
+    position: absolute;
+    background-image: url(/Images/clase-btn.png);
+    background-size: 100%;
+    right: 1vw;
+    top: 1vh;
+    width: 15%;
+    height: 5%;
+    opacity: 0;
+    animation-name: closeanimcl;
+    animation-duration: 1s;
+}
+@keyframes closeanimcl{
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+/*-------------------------------------------WINDOW PROPERTIES------------------------------------------*/
+.choose_your{
+    color:rgb(212, 211, 211)
+}
+.general_selector_div{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3vw;
+    position:relative;
+    width:95%;
+    height:100px;
+    left:0%;
+}
+.gen_sel_img_div{
+    position:absolute; 
+    text-align: center;
+    left:0%;
+    height: 100%;
+    width:30%;
+    color:black;
+    background-size: contain;
+    border-radius: 3vw;
+    
+}
+.gen_sel_img_div h6{
+    position: relative;
+    padding-top: 25%;
+}
+.gen_sel_name_div{
+    position: absolute;
+    left:26vw;
+    text-align: center;
+    height: 20%;
+    width: 55%;
+    color:white;
+    padding-bottom: 10%;
+    background-color: rgba(0, 0, 0, 0);
+}
+.gen_sel_name_div p{
+    position: absolute;
+    margin: auto;
+}
+.gen_sel_description_div{
+    position: absolute;
+    top: 20%;
+    left:26vw;
+    height: 80%;
+    width: 55%;
+    color:black;
+    font-style: italic;
+    background-color: rgba(0, 0, 0, 0);
+}
+.gen_sel_description_div p{
+    font-size: 10px;
+    color: white;
+}
+.gen_sel_picker{
+    position: absolute;
+    top: 0%;
+    left:85%;
+    height: 100%;
+    width: 15%;
+}
+.gen_sel_pick_uparrow{
+    position: absolute;
+    text-align: center;
+    background-image: url(/Images/triangleupbtn.png);
+    background-size: 52%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    top:0%;
+    left:0%;
+    height: 33%;
+    width: 100%;
+}
+.gen_sel_pick_count{
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0); 
+    top:33%;
+    left:0%;
+    height: 34%;
+    width: 100%;
+}
+.gen_sel_pick_count input{
+    border-radius:0%; 
+    position: relative; 
+    color:white;
+    font-size: 20px;
+    height: 80%; 
+    width: 80%;
+    padding-top: 10%;
+}
+.gen_sel_pick_downarrow{
+    position: absolute;
+    text-align: center;
+    background-image: url(/Images/triangledownbtn.png);
+    background-size: 52%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    top:67%;
+    left:0%;
+    height: 33%;
+    width: 100%;
+}
+.gen_sel_spacing_div{
+    position:relative;
+    width:81vw;
+    height:10px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.inputstyle::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+/*-------------------------------------------SC_CONFIRMATION_WINDOW------------------------------------------*/
+/*--------------------------------------OPEN---------------------------*/
+.sc_confirm_window_op{
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    position:absolute;
+    width: 50vw;
+    height: 30vh;
+    left: 25vw;
+    top: 25vh;
+    background-image: url(/images/Home_background.png);
+    background-size: 40%;
+    text-align: center;
+    border-radius: 2vw;
+    animation-name: confirm_window_op_anim;
+    animation-duration: 0.7s;
+ 
+}
+.sc_confirm_window_op button{
+    width: 90%;
+    margin-top: 15px;
+}
+.sc_confirm_backscreen_op{
+    position: absolute;
+    left: 0vw;
+    top:0vh;
+    width: 100vw;
+    height: 100vh;
+    background-color:  black;
+    opacity: 0.5;
+    animation-name: confirm_backscreen_op_anim;
+    animation-duration: 0.7s;
+}
+.sc_error_backscreen_op{
+    position: absolute;
+    left: 0vw;
+    top:0vh;
+    width: 100vw;
+    height: 100vh;
+    background-color:  black;
+    opacity: 0.5;
+    animation-name: confirm_backscreen_op_anim;
+    animation-duration: 0.7s;
+}
+.sc_error_tag_op{
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    font-size: 80%;
+    color: white;
+    position: absolute;
+    width: 60vw;
+    top: 30vh;
+    padding-left: 3vw;
+    height: 15vh;
+    left: 37vw;
+    text-align: left;
+    background-color: #bf2222;
+    border-radius: 2vw;
+    animation-name: sc_error_tag_op_anim;
+    animation-duration: 0.5s;
+}
+@keyframes confirm_window_op_anim{
+   0% {left: -100vw}
+  80% {left: 26vw}
+  90%{left: 25vw}
+  100%{left: 26vw}
+}
+@keyframes confirm_backscreen_op_anim{
+    0% {opacity: 0;}
+   100%{opacity: 0.5;}
+ }
+ @keyframes sc_error_tag_op_anim{
+    0% {left: 100vw}
+  40% {left: 35vw}
+  55%{left: 39vw}
+  70%{left: 37vw}
+  85%{left: 39vw}
+  100%{left: 37vw}
+ }
+/*------------------------------CLOSE--------------------------*/
+ .sc_confirm_window_cl{
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    position:absolute;
+    width: 50vw;
+    height: 30vh;
+    left: -150vw;
+    top: 25vh;
+    background-image: url(/images/Home_background.png);
+    background-size: 40%;
+    text-align: center;
+    border-radius: 2vw;
+    animation-name: confirm_window_cl_anim;
+    animation-duration: 0.7s;
+}
+.sc_confirm_window_cl button{
+    width: 90%;
+    margin-top: 15px;
+}
+.sc_confirm_backscreen_cl{
+    position: absolute;
+    left: -150vw;
+    top:0vh;
+    width: 100vw;
+    height: 100vh;
+    background-color:  black;
+    opacity: 0.5;
+    animation-name: confirm_backscreen_cl_anim;
+    animation-duration: 0.7s;
+}
+.sc_error_backscreen_cl{
+    position: absolute;
+    left: -150vw;
+    top:0vh;
+    width: 100vw;
+    height: 100vh;
+    background-color:  black;
+    opacity: 0;
+    animation-name: confirm_backscreen_cl_anim;
+    animation-duration: 0.7s;
+}
+.sc_error_tag_cl{
+    position: absolute;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    font-size: 80%;
+    color: white;
+    width: 60vw;
+    top: 30vh;
+    padding-left: 3vw;
+    height: 15vh;
+    left: -150vw;
+    text-align: left;
+    background-color: #bf2222;
+    border-radius: 2vw;
+    animation-name: sc_error_tag_cl_anim;
+    animation-duration: 0.7s;
+}
+@keyframes confirm_window_cl_anim{
+   0% {left: 37vw;}
+  100%{left: 150vw;}
+}
+@keyframes confirm_backscreen_cl_anim{
+    0% {left: 0vw; opacity: 0.5;}
+   100%{left: 0vw;opacity: 0;}
+ }
+ @keyframes sc_error_tag_cl_anim{
+   0% {left: 37vw;}
+  20% {left: 30vw;}
+  100% {left: 150vw;}
+ }
+ 
+#combo_title{
+    font-size: 40px;
+}
+
+/*----------------------SINGLE PRODUCT DISPLAY---------------------*/
+.single_display_op{
+    text-align: center;
+    background-image: url(/images/Home_background.png);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    background-size: 40%;
+    border-radius: 3vw;
+    position: absolute;
+    width:38vw;
+    height: 60vw;
+    left:31vw;
+    top:30vh;
+    animation-name: sprod_anim_op;
+    animation-duration: 1s;
+}
+.single_display_background_op{
+    position: fixed;
+    height: 100vh;
+    left: 0vw;
+    width: 100vw;
+    top: 0vw;
+    align-content: center;
+    background-color: black;
+    opacity: 0.5;
+    animation-name: sprod_bg_op;
+    animation-duration: 0.5s;
+    overflow-y: hidden;
+}
+
+@keyframes sprod_anim_op{
+    0%{left:-200vw}
+    50%{left:-200vw}
+    95%{left:33vw}
+    97%{left:30vw}
+    100%{left:31vw}
+}
+@keyframes sprod_bg_op{
+    0%{opacity: 0;}
+    100%{opacity: 0.5;}
+}
+.single_display_cl{
+    text-align: center;
+    background-image: url(/images/Home_background.png);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    background-size: 40%;
+    border-radius: 3vw;
+    position: absolute;
+    width:38vw;
+    height: 50vw;
+    left:-200vw;
+    top:30vh;
+    animation-name: sprod_anim_cl;
+    animation-duration: 0.5s;
+}
+.single_display_background_cl{
+    position: fixed;
+    height: 100vh;
+    left: -200vw;
+    width: 100vw;
+    top: 0vw;
+    align-content: center;
+    background-color: black;
+    opacity: 0.5;
+    animation-name: sprod_bg_cl;
+    animation-duration: 1s;
+    overflow-y: hidden;
+}
+
+@keyframes sprod_anim_cl{
+    0%{left:31vw}
+    100%{left:-200vw}
+}
+@keyframes sprod_bg_cl{
+    0%{left: 0vw;opacity: 0.5;}
+    0%{left: 0vw;opacity: 0.5;}
+    100%{left: 0vw;opacity: 0;}
+}
+
+.single_prod_input{
+    width: 28%;
+    user-select: none;
+    margin:0%;
+    height: 10vw;
+    font-size: 8vw;
+}
+.single_prod_name{
+    font-size: 5vw;
+    text-align: center;
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 30%;
+}
+.single_prod_picker{
+    text-align: center;
+    position: absolute;
+    border-radius: 2vw;
+    width: 80%;
+    left:10%;
+    height: 50%;
+    bottom: 20%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.singlep_up_arrow{
+    background-image: url(/Images/triangleupbtn.png);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: 22%;
+    position: absolute;
+    top:0%;
+    height: 33%;
+    width: 100%;
+}
+.singlep_input_div{
+    position: absolute;
+    top:33%;
+    height: 33%;
+    width: 100%;
+}
+.singlep_down_arrow{
+    background-image: url(/Images/triangledownbtn.png);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: 22%;
+    position: absolute;
+    top:66%;
+    height: 33%;
+    width: 100%;
+}
+.single_prod_btn{
+    position: absolute;
+    height: 15%;
+    bottom: 3%;
+    width: 100%;
+}
+.add_sprod_btn{
+    font-size: 4vw;
+    width: 50%;
+    height: 90%;
+}
+.single_prod_name_input{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
