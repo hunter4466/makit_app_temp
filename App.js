@@ -1,22 +1,13 @@
     /*installed express, nodemon, ejs, body-parser, express-flash, express-session, cookie parser*/
 /*---------------------------LIBRERIAS----------------------------------------*/
 const express = require('express')
-const passport = require('passport')
-const cookieParser = require('cookie-parser')
-const config = require('./configuration/config')
 const session = require('express-session')
-const nodemailer = require('nodemailer')
 const mysql = require('mysql')
 const app = express()
 const queryString = require('query-string')
 const { facebook_api_key } = require('./configuration/config')
 const { response } = require('express')
-const { AssetList } = require('twilio/lib/rest/serverless/v1/service/asset')
 const { render } = require('ejs')
-var addRequestId = require('express-request-id')();
-const accountSid = 'AC855fc2a93fc920ad4d24184348494c98'; 
-const authToken = 'ba0e9351247abb2ab2356a2ac8af6aca'; 
-const client = require('twilio')(accountSid, authToken); 
 
 /*---------------------------USOS----------------------------------------*/
 app.set('view engine', 'ejs')
@@ -24,15 +15,7 @@ app.set('views',  './views');
 app.use(session({ secret: 'token-muy-secreto', key: 'sid', resave: true, saveUninitialized: true }));
 app.use(express.json());
 app.use(express.urlencoded()); 
-app.use(addRequestId);
 app.use(express.static("public"))
-app.use(cookieParser());
-app.use(passport.initialize());
-app.use(passport.session());
-
-passport.serializeUser(function(user, done) {
-    done(null, user);
-  });
 
 
 /*---------------------------CONEXIONES----------------------------------------*/
@@ -59,14 +42,7 @@ var pool_orders = mysql.createPool({
     password: 'jf7l2p93li',
     database: 'Clients_orders',
     multipleStatements: 'true'})
-/*---------------------------MAILER----------------------------------------*/
-var transporter = nodemailer.createTransport({
-    service:'gmail',
-    auth:{
-        user: 'makitperu@gmail.com',
-        pass: 'iqnf mmqu zxrr zqme'
-    }
-})
+/*---------------------------MAILER----------------------------------------*
 /*---------------------------MESSAGEBIRD-------------------------*/
 
 /*---------------------------INICIO DE SESION----------------------------------------*/
