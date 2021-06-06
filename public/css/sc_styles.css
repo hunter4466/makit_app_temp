@@ -17,13 +17,14 @@
 .sc_content{
     position: absolute;
     text-align: justify;
-    top: 12vh;
+    top: 20vw;
     left: 8vw;
     width: 80vw;
     height: auto;
     background-color: rgba(0, 0, 0, 0.4);
     padding: 2%;
     border-radius: 5vw;
+    margin-bottom: 20vw;
 }
 #confirmation_open{
     text-align: center;
@@ -76,14 +77,16 @@
 #sub_item_div_1{
     position: relative;
     text-align: left;
-    font-size: 20px;
+    font-size: 4.5vw;
     height: auto;
     width:60%;
     left: -10vw;
     top: 0vh;
     margin:auto;
     color: rgba(0, 0, 0, 0.9);
-    
+}
+.item_name {
+    font-size: 4.5vw;
 }
 #sub_item_div_1 h1{
     line-height: 1;
@@ -94,7 +97,6 @@
 #sub_item_div_1_content_1{
     position: relative;
     text-align: left;
-    font-size: 10px;
     height: auto;
     width:fit-content;
     left: 2vw;
@@ -102,13 +104,12 @@
     border-radius: 25vw;
     padding-left: 5%;
     padding-right: 5%;
-    
+   
 }
-
 #sub_item_div_1_content_2{
     position: relative;
     text-align: left;
-    font-size: 13px;
+    font-size: 2.5vw;
     font-stretch: narrower;
     height: auto;
     width:fit-content;

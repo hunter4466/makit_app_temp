@@ -55,7 +55,7 @@
         <% for(let z = 0;z<prod_name[i][1].length;z++){%>
           <div id="sub_item_div_1_content_2">
           <%if(prod_name[i][3][z].reduce((a,b)=>a+b, 0)>0){%>
-        <div id="sub_item_div_1_content_1"><h1 style="user-select: none;"><%=prod_name[i][1][z][0].toUpperCase()%></h1></div>
+        <div class="item_name" id="sub_item_div_1_content_1"><h1 style="user-select: none;"><%=prod_name[i][1][z][0].toUpperCase()%></h1></div>
         
         <% for(let x = 0;x<prod_name[i][2][z].length;x++){%>
           <%if(prod_name[i][3][z][x]>0){%>

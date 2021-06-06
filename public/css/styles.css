@@ -7,12 +7,38 @@ body{
     color: #000000;
     font-family: 'Poppins', sans-serif;
     font-weight:bolder;
-    background-image: url(/images/Home_background.png);
+    background-image: url(/Images/Home_background.png);
     background-size: 40%;
     overflow-x: hidden;
 }
 .titleprincipal{
+    background-color:rgba(0, 0, 0, 0.4);
   color: rgb(0, 0, 0)
+}
+.main-logo{
+    background-image: url(/Images/logomakit.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-left: 19vw;
+    margin-top: 19vw;
+    width: 60vw;
+    height: 45vw;
+}
+.start_order{
+    box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+    margin-left: 17vw;
+    margin-top: 19vw;
+    height: 32vw;
+    width: 62vw;
+    font-size: 8vw;
+}
+.main_background{
+    width: 100vw;
+    height: 100vw;
+    background-image: url(/Images/main_bg.png/);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
 }
 /*-------------------------------------ESTILO DE INPUTS Y BOTONES GENERALES--------------------------------------------------*/
 body button{
@@ -23,7 +49,7 @@ body button{
     align-self: center;
     font-size: 100%;
     font-weight: 800;
-    background-color: #8a0000;
+    background-color:rgba(0, 0, 0, 0.4);
     color: white;
     outline: none;
     font-family: 'Poppins', sans-serif;
@@ -152,7 +178,6 @@ body input{
     70%{left:77vw}
     100%{left:150vw}
 }
-
 
 .menubuttons2{
     position: absolute;
@@ -726,6 +751,18 @@ body input{
     position: fixed;
     left: 0vw;
     top: 0%;
+}
+.topshopkartbtn{
+    background-image:url(/Images/shoppingcart.png); 
+    background-repeat: no-repeat; 
+    background-size: 30px 30px; 
+    background-position:center;
+}
+.topoffermenubtn{
+    background-image:url(/Images/carta2.png); 
+    background-repeat: no-repeat; 
+    background-size: 30px 30px; 
+    background-position:center;
 }
 .topbarbackgroundopen{
     position: fixed;
