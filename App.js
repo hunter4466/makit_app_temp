@@ -4,7 +4,6 @@ const express = require('express')
 const session = require('express-session')
 const mysql = require('mysql')
 const app = express()
-const queryString = require('query-string')
 const { facebook_api_key } = require('./configuration/config')
 const { response } = require('express')
 const { render } = require('ejs')
@@ -362,7 +361,7 @@ app.post('/destroysession', (ask, ans)=>{
     ask.session.destroy();
     ans.redirect("/")
   });
-app.listen('3000',()=>{
+app.listen('3000','127.0.0.1',()=>{
     console.log('MakitApp Iniciada')
 })
 process.on('uncaughtException', function (err) {
