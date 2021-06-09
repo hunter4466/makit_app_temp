@@ -28,7 +28,7 @@
     top:5vh;
     left: 2vw;
     align-content: center;
-    background-image: url(/images/Home_background.png);
+    background-image: url(/Images/home_background.png);
     background-size: 40%;
     animation-name: cd_c_op_anim;
     animation-duration: 1s;
@@ -127,7 +127,7 @@
     left: -500px;
     text-align: left;
     align-content: left;
-    background-image: url(/images/Home_background.png);
+    background-image: url(/Images/home_background.png);
     background-size: 40%;
     animation-name: cd_c_cl_anim;
     animation-duration: 1s;
@@ -304,7 +304,7 @@
     height: 30vh;
     left: 25vw;
     top: 25vh;
-    background-image: url(/images/Home_background.png);
+    background-image: url(/Images/home_background.png);
     background-size: 40%;
     text-align: center;
     border-radius: 2vw;
@@ -380,7 +380,7 @@
     height: 30vh;
     left: -150vw;
     top: 25vh;
-    background-image: url(/images/Home_background.png);
+    background-image: url(/Images/home_background.png);
     background-size: 40%;
     text-align: center;
     border-radius: 2vw;
@@ -450,7 +450,7 @@
 /*----------------------SINGLE PRODUCT DISPLAY---------------------*/
 .single_display_op{
     text-align: center;
-    background-image: url(/images/Home_background.png);
+    background-image: url(/Images/home_background.png);
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
     background-size: 40%;
     border-radius: 3vw;
@@ -489,7 +489,7 @@
 }
 .single_display_cl{
     text-align: center;
-    background-image: url(/images/Home_background.png);
+    background-image: url(/Images/home_background.png);
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
     background-size: 40%;
     border-radius: 3vw;

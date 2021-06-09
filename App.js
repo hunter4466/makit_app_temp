@@ -33,14 +33,14 @@ multipleStatements: 'true'})
     password: 'jf7l2p93li',
     database: 'makit_software',
     multipleStatements: 'true'}) */
-
+/*
 var pool_orders = mysql.createPool({  
     connectionLimit: 20,   
     host:'35.224.29.76',
     user: 'mariochois4466',
     password: 'jf7l2p93li',
     database: 'Clients_orders',
-    multipleStatements: 'true'})
+    multipleStatements: 'true'})*/
 /*---------------------------MAILER----------------------------------------*
 /*---------------------------MESSAGEBIRD-------------------------*/
 

@@ -14,7 +14,7 @@
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
     border-radius: 3vw;
     text-align: center;
-   background-image: url(/images/Home_background.png);
+   background-image: url(/Images/home_background.png);
    width: 90vw;
    height: 80vh;
    padding-top: 1vh;
@@ -57,7 +57,7 @@
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
     border-radius: 3vw;
     text-align: center;
-   background-image: url(/images/Home_background.png);
+   background-image: url(/Images/home_background.png);
    width: 90vw;
    height: 0vh;
    padding-top: 1vh;
@@ -128,7 +128,7 @@
     height: 30vh;
     left: 25vw;
     top: 25vh;
-    background-image: url(/images/Home_background.png);
+    background-image: url(/Images/home_background.png);
     background-size: 40%;
     text-align: center;
     border-radius: 2vw;
@@ -148,7 +148,7 @@
     height: 30vh;
     left: -250vw;
     top: 25vh;
-    background-image: url(/images/Home_background.png);
+    background-image: url(/Images/home_background.png);
     background-size: 40%;
     text-align: center;
     border-radius: 2vw;
@@ -157,7 +157,7 @@
 .address_selector_op{
     position: absolute;
     text-align: center;
-    background-image: url(/images/Home_background.png);
+    background-image: url(/Images/home_background.png);
     background-size: 40%;
     top: 30vw;
     left:10vw;
