@@ -19,12 +19,12 @@ app.use(express.static("public"))
 
 /*---------------------------CONEXIONES----------------------------------------*/
 var pool = mysql.createPool({  
-connectionLimit: 1000,  
-host:'localhost',
-user: 'root',
-password: 'jf7l2p93li',
-database: 'makit_software',
-multipleStatements: 'true'}) 
+    connectionLimit: 1000,  
+    host:'localhost',
+    user: 'ps6dng7z1bo2',
+    password: 'jf7l2p93lI',
+    database: 'makit_software',
+    multipleStatements: 'true'}) 
 
 /*var pool = mysql.createPool({  
     connectionLimit: 1000,  
