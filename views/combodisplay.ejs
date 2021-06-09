@@ -87,6 +87,13 @@
     <button type="button" id="submit_button" >Agregar al carrito</button>
 
 </div>
+<div id="combodisplay0_5" class="combodisplay_c_0_5_cl" style="display: none;">
+<%for(let i = 0;i<splited_items.length;i++){%>
+    <div id="counter_item_<%=i%>" class="counter_item"></div>
+    <%}%>
+    
+
+</div>
 <%- include ('sc_confirm')-%>
 
 

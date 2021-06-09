@@ -18,21 +18,21 @@ app.use(express.static("public"))
 
 
 /*---------------------------CONEXIONES----------------------------------------*/
-var pool = mysql.createPool({  
+/*var pool = mysql.createPool({  
     connectionLimit: 1000,  
     host:'localhost',
     user: 'ps6dng7z1bo2',
     password: 'jf7l2p93lI',
     database: 'makit_software',
-    multipleStatements: 'true'}) 
+    multipleStatements: 'true'}) */
 
-/*var pool = mysql.createPool({  
+var pool = mysql.createPool({  
     connectionLimit: 1000,  
-    host:'173.201.183.152',
-    user: 'makit_app',
+    host:'localhost',
+    user: 'root',
     password: 'jf7l2p93li',
     database: 'makit_software',
-    multipleStatements: 'true'}) */
+    multipleStatements: 'true'}) 
 /*
 var pool_orders = mysql.createPool({  
     connectionLimit: 20,   
@@ -60,6 +60,7 @@ app.all('/',(ask,ans)=>{
      
 })
 app.all('/start_order',(ask,ans)=>{
+    ask.session.user_id = "1"
     ask.session.user_sc1 = []
                     ask.session.user_sc2 = []
                     ask.session.user_sc3 = []
@@ -361,7 +362,7 @@ app.post('/destroysession', (ask, ans)=>{
     ask.session.destroy();
     ans.redirect("/")
   });
-app.listen('3000','127.0.0.1',()=>{
+app.listen('3000',()=>{
     console.log('MakitApp Iniciada')
 })
 process.on('uncaughtException', function (err) {

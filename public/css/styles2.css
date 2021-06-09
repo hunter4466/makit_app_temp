@@ -23,9 +23,9 @@
     position: fixed;
     border-radius: 3vw;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-    height: 70vh;
+    height: 122vw;
     width: 95vw;
-    top:5vh;
+    top:2vw;
     left: 2vw;
     align-content: center;
     background-image: url(/Images/home_background.png);
@@ -48,14 +48,14 @@
 @keyframes cd_c_op_anim{
     0%{height: 0px; opacity: 0;}
     50%{height: 0px; opacity: 0;}
-    100%{height: 70vh; opacity: 1;}
+    100%{height: 122vw; opacity: 1;}
 }
 .combodisplay_c_0_3_op{ /*---<<<<<<<------SUBMIT BUTTON--------*/
     position: absolute;
-    left:20vw;
-    width: 60%;
-    height: 9%;
-    top:89%;
+    left: 66vw;
+    width: 30vw;
+    height: 30vw;
+    top:128vw;
     opacity: 1;
     animation-name: submitanim;
     animation-duration: 2s;
@@ -63,11 +63,11 @@
 @keyframes submitanim{
 0%{left:-200vw}
 50%{left:-200vw}
-90%{left: 23vw}
-95%{left: 17vw}
-98%{left: 22vw}
-99%{left: 18vw}
-100%{left: 20vw}
+90%{left: 69vw}
+95%{left: 63vw}
+98%{left: 68vw}
+99%{left: 64vw}
+100%{left: 66vw}
 
 }
 .combodisplay_c_0_3_op button{
@@ -94,8 +94,37 @@
     50%{opacity: 0;}
     100%{opacity: 1;}
 }
-
-
+.combodisplay_c_0_5_op{ /*---<<<<<<<------SUBMIT BUTTON--------*/
+    position: absolute;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 3vw;
+    flex-wrap: wrap;
+    left: 2vw;
+    width: 62vw;
+    height: 30vw;
+    top:128vw;
+    opacity: 1;
+    animation-name: counter_anim_op;
+    animation-duration: 2s;
+}
+@keyframes counter_anim_op{
+0%{left:-200vw}
+50%{left:-200vw}
+90%{left: 5vw}
+95%{left: -1vw}
+98%{left: 4vw}
+99%{left: 0vw}
+100%{left: 2vw}
+}
+.counter_item {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 2vw;
+    width: 14vw;
+    height: 14vw;
+    margin: 0.7vw;
+}
 
 /*-------------------------------------------CLOSE------------------------------------------*/
 .combodisplay_c_0_0_cl{ /*---<<<<<<<-----BACK SHADOW-----*/
@@ -120,10 +149,10 @@
     position: fixed;
     border-radius: 3vw;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-    height: 70vh;
+    height: 122vw;
     width: 88vw;
     opacity: 0;
-    top:5vh;
+    top:2vw;
     left: -500px;
     text-align: left;
     align-content: left;
@@ -146,15 +175,15 @@
 .combodisplay_c_0_3_cl{ /*---<<<<<<<------SUBMIT BUTTON--------*/
     position: absolute;
     left:-500vw;
-    width: 60%;
-    height: 9%;
-    top:89%;
+    width: 30vw;
+    height: 30vw;
+    top:128vw;
     opacity: 1;
     animation-name: submitanim2;
     animation-duration: 1s;
 }
 @keyframes submitanim2{
-    0%{opacity: 1; left: 20vw;}
+    0%{opacity: 1; left: 66vw;}
     100%{opacity: 0;left: -500px;}
 }
 .combodisplay_c_0_3_cl button{
@@ -179,6 +208,23 @@
     0%{opacity: 0;}
     50%{opacity: 0;}
     100%{opacity: 1;}
+}
+.combodisplay_c_0_5_cl{ /*---<<<<<<<------SUBMIT BUTTON--------*/
+    position: absolute;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 3vw;
+    left:-500vw;
+    width: 62vw;
+    height: 30vw;
+    top:128vw;
+    opacity: 1;
+    animation-name: counter_anim_cl;
+    animation-duration: 1s;
+}
+@keyframes counter_anim_cl{
+    0%{opacity: 1; left: 2vw;}
+    100%{opacity: 0;left: -500px;}
 }
 /*-------------------------------------------WINDOW PROPERTIES------------------------------------------*/
 .choose_your{

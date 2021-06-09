@@ -44,10 +44,10 @@ body{
 body button{
     border-radius: 10px;
     border-style: none;
-    width: 60%;
+    width: 60vw;
    height: auto;
     align-self: center;
-    font-size: 100%;
+    font-size: 4vw;
     font-weight: 800;
     background-color:rgba(0, 0, 0, 0.4);
     color: white;
@@ -62,10 +62,10 @@ body button:hover{
     opacity: 0.9; 
 }
 body input{
-    border-radius: 10px;
+    border-radius: 3vw;
     border-style: none;
-    width: 90%;
-    height: 30px;
+    width: 90vw;
+    height: 60vw;
     align-self: center;
     text-align: center;
     font-size: 100%;
@@ -80,7 +80,7 @@ body input{
 .bodyindex{
     align-content: center;
     text-align: center;
-    padding: 5%;
+    padding: 5vw;
     animation-name: bodyanim;
     animation-duration:  2.5s;
 }

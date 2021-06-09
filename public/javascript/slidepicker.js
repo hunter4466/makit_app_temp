@@ -4,6 +4,7 @@ let display_1 = document.getElementById('combodisplay0_1')
 let display_2 = document.getElementById('combodisplay0_2')
 let display_3 = document.getElementById('combodisplay0_3')
 let display_4 = document.getElementById('combodisplay0_4')
+let display_5 = document.getElementById('combodisplay0_5')
 let active_product = document.getElementById('active_product')
 let active_price = document.getElementById('active_price')
 let cat_items = document.getElementById('cat_items')
@@ -82,6 +83,8 @@ for (let i = 0;i<product_buttons_array.length;i++){
     for(let i = 0;i<cat_items.value;i++){
         cat_items_array.push(document.getElementById(`prod_${active_product.value}_catitem_${i+1}`))
     }
+ 
+
    let cat_name_array = [] //nombres de categorías
     for(let i = 0;i<cat_items_array.length;i++){
             cat_name_array.push(document.getElementById(`cat_items_name_${i}`))
@@ -90,12 +93,18 @@ for (let i = 0;i<product_buttons_array.length;i++){
     for(let i = 0;i<cat_name_array.length;i++){
        cat_active_name_array.push(document.getElementById(`${cat_name_array[i].value}show`))
     }
+    let counter_items_array = [] //artículo de menú flotante
+    for(let i = 0;i<cat_name_array.length;i++){
+        counter_items_array.push(document.getElementById(`counter_item_${i}`))
+    }
     for(let i = 0;i<cat_active_name_array.length;i++){
         if (cat_items_array[i].value>0){
             cat_active_name_array[i].style = "display: inline"
+            counter_items_array[i].style = "display: inline"
         }
         else{
             cat_active_name_array[i].style = "display: none"
+            counter_items_array[i].style = "display: none"
         }
     }
     event.preventDefault();
@@ -104,11 +113,13 @@ for (let i = 0;i<product_buttons_array.length;i++){
     display_2.className = "combodisplay_c_0_2_op"
     display_3.className = "combodisplay_c_0_3_op"
     display_4.className = "combodisplay_c_0_4_op"
+    display_5.className = "combodisplay_c_0_5_op"
     display_0.style = "display: inline"
     display_1.style = "display: inline"
     display_2.style = "display: inline"
     display_3.style = "display: inline"
     display_4.style = "display: inline"
+    display_5.style = "display: flex"
     menu_back_btn_id.className = "menu_back_btn_cl"
 
             for(let i = 0;i<cat_items.value;i++){
@@ -152,6 +163,7 @@ display_0.addEventListener('click',(event)=>{
     display_2.className = "combodisplay_c_0_2_cl"
     display_3.className = "combodisplay_c_0_3_cl"
     display_4.className = "combodisplay_c_0_4_cl"
+    display_5.className = "combodisplay_c_0_5_cl"
     body_general.style = "overflow-y: scroll"
     display_1.scrollTo(0,0)
 
@@ -176,6 +188,7 @@ display_4.addEventListener('click',(event)=>{
     display_2.className = "combodisplay_c_0_2_cl"
     display_3.className = "combodisplay_c_0_3_cl"
     display_4.className = "combodisplay_c_0_4_cl"
+    display_5.className = "combodisplay_c_0_5_cl"
     body_general.style = "overflow-y: scroll"
     display_1.scrollTo(0,0)
     for(let x = 0;x<cat_items.value;x++){ 
